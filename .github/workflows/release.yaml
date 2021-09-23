@@ -41,6 +41,9 @@ jobs:
       with:
         api_token: ${{ secrets.NEXPLOIT_TOKEN }}
         scan: ${{ steps.scan.outputs.id }}
+    - run: |
+        pwd;
+        ls -lah;
     - name: Push changes to the branch
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
