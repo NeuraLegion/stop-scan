@@ -14,25 +14,9 @@ async function stopScan(uuid: string) {
       additionalHeaders: { Authorization: `Api-Key ${apiToken}` },
     };
     let restRes = await restc.get(`api/v1/scans/${uuid}/stop`, options);
-
-    switch (restRes.statusCode) {
-      case 200: {
-        core.info("Was succesfully stopped");
-        break;
-      }
-      case 401: {
-        core.setFailed("Failed to log in with provided credentials");
-        break;
-      }
-      case 403: {
-        core.setFailed(
-          "The account doesn't have any permissions for a resource"
-        );
-        break;
-      }
-    }
-  } catch (err) {
-    console.debug("Can't stop the scan");
+    core.info("Was succesfully stopped");
+  } catch (err: any) {
+    core.setFailed(`Failed (${err.statusCode}) ${err.message}`);
   }
 }
 
