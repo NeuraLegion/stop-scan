@@ -5,7 +5,7 @@ const apiToken = core.getInput("api_token");
 const scanId = core.getInput("scan");
 const hostname = core.getInput("hostname");
 
-const baseUrl = hostname ? `https://$hostname` : "https://nexploit.app";
+const baseUrl = hostname ? `https://${hostname}` : "https://nexploit.app";
 let restc: rm.RestClient = new rm.RestClient("GitHub Actions", baseUrl);
 
 async function stopScan(uuid: string) {
