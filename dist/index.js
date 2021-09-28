@@ -37,19 +37,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(964));
 const rm = __importStar(__nccwpck_require__(235));
-const apiToken = core.getInput("api_token");
-const scanId = core.getInput("scan");
-const hostname = core.getInput("hostname");
-const baseUrl = hostname ? `https://${hostname}` : "https://nexploit.app";
-let restc = new rm.RestClient("GitHub Actions", baseUrl);
+const apiToken = core.getInput('api_token');
+const scanId = core.getInput('scan');
+const hostname = core.getInput('hostname');
+const baseUrl = hostname ? `https://${hostname}` : 'https://nexploit.app';
+const restc = new rm.RestClient('GitHub Actions', baseUrl);
 function stopScan(uuid) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            let options = {
-                additionalHeaders: { Authorization: `Api-Key ${apiToken}` },
+            const options = {
+                additionalHeaders: { Authorization: `Api-Key ${apiToken}` }
             };
-            let restRes = yield restc.get(`api/v1/scans/${uuid}/stop`, options);
-            core.info("Was succesfully stopped");
+            const restRes = yield restc.get(`api/v1/scans/${uuid}/stop`, options);
+            core.info(`Was succesfully stopped. Code ${restRes.statusCode}.`);
         }
         catch (err) {
             core.setFailed(`Failed (${err.statusCode}) ${err.message}`);
