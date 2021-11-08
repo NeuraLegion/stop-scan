@@ -40,7 +40,9 @@ const rm = __importStar(__nccwpck_require__(235));
 const apiToken = core.getInput('api_token');
 const scanId = core.getInput('scan');
 const hostname = core.getInput('hostname');
-const baseUrl = hostname ? `https://${hostname}` : 'https://nexploit.app';
+const baseUrl = hostname
+    ? `https://${hostname}`
+    : 'https://app.neuralegion.com';
 const restc = new rm.RestClient('GitHub Actions', baseUrl);
 function stopScan(uuid) {
     return __awaiter(this, void 0, void 0, function* () {
