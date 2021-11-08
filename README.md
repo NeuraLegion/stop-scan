@@ -41,7 +41,7 @@ More information is available on NeuraLegion’s:
 
 ### `api_token`
 
-**Required**. Your NeuraLegion API authorization token (key). You can generate it in the **Organization** section on [app.neuralegion.com](https://app.neuralegion.com/login). Find more information [here](https://kb.neuralegion.com/#/guide/np-web-ui/advanced-set-up/managing-org?id=managing-organization-apicli-authentication-tokens).
+**Required**. Your NeuraLegion API authorization token (key). You can generate it in the **Organization** section on [app.neuralegion.com](https://app.neuralegion.com/login). Find more information [here](https://docs.neuralegion.com/docs/manage-your-organization#manage-organization-apicli-authentication-tokens).
 
 _Example:_ `api_token: ${{ secrets.NEURALEGION_TOKEN }}`
 
