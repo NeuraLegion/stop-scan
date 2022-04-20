@@ -1,5 +1,5 @@
-name: 'Bright Stop Scan'
-description: 'Stops Bright Scan'
+name: 'NeuraLegion Stop Scan'
+description: 'Stops NeuraLegion Scan'
 branding:
   icon: stop-circle
   color: blue
