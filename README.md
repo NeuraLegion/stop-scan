@@ -1,10 +1,10 @@
-# Stop a NeuraLegion Scan
+# Stop a Bright Scan
 
-This action stops a NeuraLegion scan.
+This action stops a Bright scan.
 
 ### Build Secure Apps & APIs. Fast.
 
-[NeuraLegion](https://www.neuralegion.com) is a powerful dynamic application & API security testing (DAST) platform that security teams trust and developers love.
+[Bright](https://www.brightsec.com) is a powerful dynamic application & API security testing (DAST) platform that security teams trust and developers love.
 
 ### Automatically Tests Every Aspect of Your Apps & APIs
 
@@ -12,7 +12,7 @@ Scans any target, whether Web Apps, APIs (REST. & SOAP, GraphQL & more), Web soc
 
 ### Seamlessly integrates with the Tools and Workflows You Already Use
 
-NeuraLegion works with your existing CI/CD pipelines – trigger scans on every commit, pull request or build with unit testing.
+Bright works with your existing CI/CD pipelines – trigger scans on every commit, pull request or build with unit testing.
 
 ### Spin-Up, Configure and Control Scans with Code
 
@@ -25,15 +25,15 @@ Scans are fast as our AI-powered engine can understand application architecture 
 
 ### No False Positives
 
-Stop chasing ghosts and wasting time. NeuraLegion doesn’t return false positives, so you can focus on releasing code.
+Stop chasing ghosts and wasting time. Bright doesn’t return false positives, so you can focus on releasing code.
 
 ### Comprehensive Security Testing
 
-NeuraLegion tests for all common vulnerabilities, such as SQL injection, CSRF, XSS, and XXE -- as well as uncommon vulnerabilities, such as business logic vulnerabilities.
+Bright tests for all common vulnerabilities, such as SQL injection, CSRF, XSS, and XXE -- as well as uncommon vulnerabilities, such as business logic vulnerabilities.
 
-More information is available on NeuraLegion’s:
-* [Website](https://www.neuralegion.com/)
-* [Knowledge base](https://docs.neuralegion.com/docs/quickstart)
+More information is available on Bright’s:
+* [Website](https://www.brightsec.com/)
+* [Knowledge base](https://docs.brightsec.com/docs/quickstart)
 * [YouTube channel](https://www.youtube.com/channel/UCoIC0T1pmozq3eKLsUR2uUw)
 * [GitHub Actions](https://github.com/marketplace?query=neuralegion+)
 
@@ -41,7 +41,7 @@ More information is available on NeuraLegion’s:
 
 ### `api_token`
 
-**Required**. Your NeuraLegion API authorization token (key). You can generate it in the **Organization** section on [app.neuralegion.com](https://app.neuralegion.com/login). Find more information [here](https://docs.neuralegion.com/docs/manage-your-organization#manage-organization-apicli-authentication-tokens).
+**Required**. Your Bright API authorization token (key). You can generate it in the **Organization** section in [the Bright app](https://app.neuralegion.com/login). Find more information [here](https://docs.brightsec.com/docs/manage-your-organization#manage-organization-apicli-authentication-tokens).
 
 _Example:_ `api_token: ${{ secrets.NEURALEGION_TOKEN }}`
 
@@ -58,9 +58,9 @@ _Example:_ `scan: ${{ steps.start.outputs.id }}`
 ```yml
 start_and_stop_scan:
   runs-on: ubuntu-latest
-  name: A job to run a NeuraLegion scan
+  name: A job to run a Bright scan
   steps:
-  - name: 🏁 Start NeuraLegion Scan
+  - name: 🏁 Start Bright Scan
     id: start
     uses: NeuraLegion/run-scan@master
     with:
