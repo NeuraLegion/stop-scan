@@ -42,7 +42,7 @@ const scanId = core.getInput('scan');
 const hostname = core.getInput('hostname');
 const baseUrl = hostname
     ? `https://${hostname}`
-    : 'https://app.neuralegion.com';
+    : 'https://app.brightsec.com';
 const restc = new rm.RestClient('GitHub Actions', baseUrl);
 function stopScan(uuid) {
     return __awaiter(this, void 0, void 0, function* () {
