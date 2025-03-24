@@ -1,5 +1,5 @@
-name: 'NeuraLegion Stop Scan'
-description: 'Stops NeuraLegion Scan'
+name: 'Bright Security Stop Scan'
+description: 'Stops a Bright Security Scan'
 branding:
   icon: stop-circle
   color: blue
@@ -11,8 +11,8 @@ inputs:
     description: 'Scan ID to wait for'
     required: true
   hostname:
-    description: 'Hostname. Default is app.neuralegion.com'
+    description: 'Hostname. Default is app.brightsec.com'
     required: false
 runs:
-  using: 'node12'
+  using: 'node20'
   main: 'dist/index.js'
