@@ -1,5 +1,5 @@
-name: 'Bright Security Stop Scan'
-description: 'Stops a Bright Security Scan'
+name: 'Bright Stop Scan'
+description: 'Stops a Bright Scan'
 branding:
   icon: stop-circle
   color: blue
